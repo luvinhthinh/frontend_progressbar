@@ -1,0 +1,63 @@
+$width-lg: 50%;
+$width-md: 80%;
+$width-sm: 100%;
+$box-padding : 20px;
+
+.bar-background {
+  text-align: center;
+  padding: 5px;
+  height: 35px;
+}
+
+.bar-front {
+  background-color: lightblue;
+  padding: 5px;
+}
+
+@mixin screen-css($screen-size){
+  .usage-display {
+    position: absolute;
+    left:0;
+    color: black;
+    font-weight: bold;
+    width: $screen-size;
+  }
+  .box {
+    padding : $box-padding;
+    width: $screen-size;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  @include screen-css($width-sm);
+  .add-button {
+    width: 40%;
+    height: 40px;
+  }
+  .selection {
+    font-size: 22pt;
+    width: $width-sm;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  @include screen-css($width-md);
+  .add-button {
+    width: 14%;
+  }
+  .selection {
+    width: 34%;
+    font-size: 14pt;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @include screen-css($width-lg);
+  .add-button {
+    width: 15%;
+  }
+  .selection {
+    width: 30%;
+    font-size: 14pt;
+  }
+}
