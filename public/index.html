@@ -31,6 +31,13 @@
               </div>
           {{/}}  <!--- loop bars end -->
       </div> <!--- box end -->
+
+      <select class="selection" value='{{selectedBar}}'>
+          {{#bars}}
+              <option value='{{id}}'>{{name}}</option>
+          {{/}} <!--- select bars end -->
+      </select>
+
   </script>
 </body>
 </html>
