@@ -26,6 +26,11 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        execute: {
+            target: {
+                src: ['server.js']
+            }
+        },
         qunit: {
             files : ['test/index.html']
         },
@@ -44,6 +49,7 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-execute');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-sass');
 
@@ -52,4 +58,11 @@ module.exports = function (grunt) {
         'clean:dist',
         'uglify'
     ]);
+
+    grunt.registerTask('default',[
+        'sass',
+        'qunit',
+        'minified',
+        'execute'
+    ])
 };
