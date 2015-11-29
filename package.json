@@ -1,0 +1,11 @@
+{
+    "name": "my-simple-progress-bar",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Front End Progress Bar",
+    "repository": "https://github.com/luvinhthinh/frontend_progressbar",
+    "license": "MIT",
+    "dependencies": {
+        "express": "3.x"
+    }
+}
