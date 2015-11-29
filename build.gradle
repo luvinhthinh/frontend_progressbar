@@ -1,0 +1,15 @@
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile	'info.cukes:cucumber-junit:1.2.4',
+			'info.cukes:cucumber-java:1.2.4',
+			'org.seleniumhq.selenium:selenium-java:2.48.2',
+			'org.seleniumhq.selenium:selenium-firefox-driver:2.48.2',
+			'junit:junit:4.12'
+}
