@@ -30,14 +30,19 @@
                    <div class="usage-display"> {{currentValue}}%</div>
               </div>
           {{/}}  <!--- loop bars end -->
-      </div> <!--- box end -->
 
-      <select class="selection" value='{{selectedBar}}'>
+        <select class="selection" value='{{selectedBar}}'>
           {{#bars}}
               <option value='{{id}}'>{{name}}</option>
           {{/}} <!--- select bars end -->
-      </select>
+        </select>
 
+        {{#buttons}}
+          <button class="add-button" on-click="add:{{value}}">{{label}}</button> &nbsp
+        {{/}} <!--- select buttons end -->
+      </div> <!--- box end -->
   </script>
+
+  <script src="js/data.js"></script>
 </body>
 </html>
