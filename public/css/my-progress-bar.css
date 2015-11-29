@@ -1,0 +1,64 @@
+.bar-background {
+  text-align: center;
+  padding: 5px;
+  height: 35px; }
+
+.bar-front {
+  background-color: lightblue;
+  padding: 5px; }
+
+@media screen and (max-width: 480px) {
+  .usage-display {
+    position: absolute;
+    left: 0;
+    color: black;
+    font-weight: bold;
+    width: 100%; }
+
+  .box {
+    padding: 20px;
+    width: 100%; }
+
+  .add-button {
+    width: 40%;
+    height: 40px; }
+
+  .selection {
+    font-size: 22pt;
+    width: 100%; } }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .usage-display {
+    position: absolute;
+    left: 0;
+    color: black;
+    font-weight: bold;
+    width: 80%; }
+
+  .box {
+    padding: 20px;
+    width: 80%; }
+
+  .add-button {
+    width: 14%; }
+
+  .selection {
+    width: 34%;
+    font-size: 14pt; } }
+@media screen and (min-width: 768px) {
+  .usage-display {
+    position: absolute;
+    left: 0;
+    color: black;
+    font-weight: bold;
+    width: 50%; }
+
+  .box {
+    padding: 20px;
+    width: 50%; }
+
+  .add-button {
+    width: 15%; }
+
+  .selection {
+    width: 30%;
+    font-size: 14pt; } }
