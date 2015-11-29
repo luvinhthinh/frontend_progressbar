@@ -26,6 +26,9 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        qunit: {
+            files : ['test/index.html']
+        },
         uglify: {
             build: {
                 src: SRC_ITEMS,
@@ -41,6 +44,7 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-sass');
 
 
