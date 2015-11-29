@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-
+<!doctype html>
+<html lang='en-US'>
+<head>
+    <meta charset='utf-8'>
+    <title>Progress Bar Demo</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my-progress-bar.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
 </head>
+
 <body>
-    <h1>Progress Bars Demo</h1>
+<h1>Progress Bars Demo</h1>
 
-    <div id='container'></div>
+<div id='container'></div>
 
-    <script id='template-progressbar' type='text/ractive' >
+<script id='template-progressbar' type='text/ractive' >
       <div class="box">
           {{#bars}}
               <div class="progress bar-background">
@@ -31,18 +32,18 @@
               </div>
           {{/}}  <!--- loop bars end -->
 
-        <select class="selection" value='{{selectedBar}}'>
-          {{#bars}}
-              <option value='{{id}}'>{{name}}</option>
-          {{/}} <!--- select bars end -->
-        </select>
+          <select class="selection" value='{{selectedBar}}'>
+              {{#bars}}
+                  <option value='{{id}}'>{{name}}</option>
+              {{/}} <!--- select bars end -->
+          </select>
 
-        {{#buttons}}
-          <button class="add-button" on-click="add:{{value}}">{{label}}</button> &nbsp
-        {{/}} <!--- select buttons end -->
+          {{#buttons}}
+              <button class="add-button" on-click="add:{{value}}">{{label}}</button> &nbsp
+          {{/}} <!--- select buttons end -->
       </div> <!--- box end -->
   </script>
+<script src="js/dist/my-simple-progress-bar.min.js"></script>
 
-  <script src="js/data.js"></script>
 </body>
 </html>
