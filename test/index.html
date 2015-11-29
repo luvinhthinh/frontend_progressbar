@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.20.0.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+<script src="http://code.jquery.com/qunit/qunit-1.20.0.js"></script>
+
+<script src="../public/js/helpers.js"></script>
+<script>
+    QUnit.test( "test function addValue()", function( assert ) {
+        assert.equal(addValue(0, 10, 0), 10, "Passed: Zero testing -> should add 10 to 0" );
+        assert.equal(addValue(0, 25, 0), 25, "Passed: Zero testing -> should add 25 to 0" );
+        assert.equal(addValue(0, -10, 0), 0, "Passed: Zero testing -> should not sub 10 from 0" );
+        assert.equal(addValue(0, -25, 0), 0, "Passed: Zero testing -> should not sub 25 from 0" );
+
+        assert.equal(addValue(5, 10, 0), 15, "Passed: Non-Zero testing -> should add 10 to 5" );
+        assert.equal(addValue(5, 25, 0), 30, "Passed: Non-Zero testing -> should add 10 to 5" );
+        assert.equal(addValue(5, -10, 0), 0, "Passed: Non-Zero testing -> should not sub 10 from 5" );
+        assert.equal(addValue(5, -25, 0), 0, "Passed: Non-Zero testing -> should not sub 25 from 5" );
+
+        assert.equal(addValue(100, 10, 0), 110, "Passed: Non-Zero testing -> should add 10 to 100" );
+        assert.equal(addValue(100, 25, 0), 125, "Passed: Non-Zero testing -> should add 25 to 100" );
+    });
+</script>
+</body>
+</html>
