@@ -29,6 +29,7 @@ Assumption: The below tools are installed on client side:
  - Grunt
  - Gradle
  - Java
+ - NodeJS
 
 Instruction:
  - To compile sass to css : grunt sass
@@ -37,3 +38,6 @@ Instruction:
  - To start node server : grunt execute
  - To execute all 4 above tasks : grunt
  - To run functional test : gradle cucumber
+
+Room for enhancement:
+ - Make Grunt execute cucumber test after deploying NodeJS
