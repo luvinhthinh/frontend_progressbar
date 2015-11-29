@@ -12,5 +12,25 @@
 </head>
 <body>
     <h1>Progress Bars Demo</h1>
+
+    <div id='container'></div>
+
+    <script id='template-progressbar' type='text/ractive' >
+      <div class="box">
+          {{#bars}}
+              <div class="progress bar-background">
+                  <div id="{{id}}"
+                    class="progress-bar bar-front"
+                    role="progressbar"
+                    aria-valuenow="{{currentValue}}"
+                    aria-valuemin="{{min}}"
+                    aria-valuemax="100"
+                    style="width:{{currentValue}}%">
+                     </div>
+                   <div class="usage-display"> {{currentValue}}%</div>
+              </div>
+          {{/}}  <!--- loop bars end -->
+      </div> <!--- box end -->
+  </script>
 </body>
 </html>
